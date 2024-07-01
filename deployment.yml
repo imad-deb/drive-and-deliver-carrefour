@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: drive-and-deliver
+spec:
+  containers:
+    - name: drive-and-deliver
+      image: docker-id/drive-and-deliver # TODO: use the right docker id
+      ports:
+        - containerPort: 8080
