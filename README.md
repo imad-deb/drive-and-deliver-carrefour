@@ -47,12 +47,73 @@ They have no priority between them, you can implement the ones you are intereste
 - Propose a data streaming solution
 - Propose a solution for consuming and/or producing events
 
-### CI/CD
+#### CI/CD
 - Propose a CI/CD system for the project
 - Propose End-to-End tests for your application
 
-### Packaging
+#### Packaging
 - Create a container of your application
 - Deploy your application in a pod
 - Create a native image of your application
 
+## Tasks carried out for the exercise:
+
+#### REST API
+- Propose an HTTP REST API to interact with the services implemented in the MVP
+- Secure the API
+- Use a non-blocking solution
+
+#### Persistence
+- Propose a data persistence solution
+- 
+#### Stream
+- Propose a data streaming solution
+- Propose a solution for consuming and/or producing events
+
+#### Packaging
+- Create a container of your application
+- Deploy your application in a pod
+- Create a native image of your application
+
+
+## Launch the application
+
+The following are the steps to download and launch the Spring Boot application from a Github repository:
+
+1. **Clone the Github repository** :
+   Use `git clone` to clone the repository in your local machine.
+
+   ```
+   git clone <https://github.com/imad-deb/drive-and-deliver-carrefour.git>
+   ```
+
+2. **Import the project into your IDE** :
+   Open your IDE (Eclipse, IntelliJ IDEA, etc.) and import the project you cloned. Make sure your IDE is configured to support Java 21.
+
+3. **Configure the application properties** :
+   Adapt the application properties in the `application.properties` file to your environment.
+
+4. **Compile the application** :
+   Use Maven to compile the Spring Boot application.
+   You can run the following command at the root of the project :
+
+   ```
+   mvn clean install
+   ```
+
+5. **Launch Kafka** :
+
+   ```
+   .\bin\windows\kafka-server-start.bat .\config\server.properties
+   
+   ```
+6. **Launch the app** :
+   You can launch Spring Boot application directly from your IDE by running the main class (@SpringBootApplication`)
+   or by using Maven to run the application. With Maven, use the command :
+
+   ```
+   mvn spring-boot:run
+   ```
+
+8. **Access the app** :
+   Once the application is started, you can access it via the URL specified in the configuration file (`http://localhost:8080`).
